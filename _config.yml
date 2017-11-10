@@ -3,16 +3,16 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: abcdcba's blog
+title: abcdcba123's blog
 subtitle: is subtitle
-description: init
-author: abcdcba
+description: blog
+author: abcdcba123
 language: zh-Hans
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://abcdcba123.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
