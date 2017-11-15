@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="java maven," />
 
 
 
@@ -80,6 +80,7 @@
 
 
 <meta name="description" content="在maven中导入jar包可能会遇到各种问题 第一个问题：eclipse中并不会出现正常的select界面，会提示： 1[rectangle setX: 10 y: 10 width: 20 height: 20]; 1alert(&amp;apos;Hello World!&amp;apos;); Array.map1array.map(callback[, thisArg])  可能的原因是：maven自动下">
+<meta name="keywords" content="java maven">
 <meta property="og:type" content="article">
 <meta property="og:title" content="eclipse中maven插件搜索无结果解决办法">
 <meta property="og:url" content="https://abcdcba123.github.io/2017/11/14/eclipse中maven插件搜索无结果解决办法/index.html">
@@ -91,7 +92,8 @@
 <meta property="og:image" content="https://abcdcba123.github.io/images/eclipse中maven插件搜索无结果解决办法/3.png">
 <meta property="og:image" content="https://abcdcba123.github.io/images/eclipse中maven插件搜索无结果解决办法/4.png">
 <meta property="og:image" content="https://abcdcba123.github.io/images/eclipse中maven插件搜索无结果解决办法/5.png">
-<meta property="og:updated_time" content="2017-11-14T12:10:16.723Z">
+<meta property="og:image" content="https://abcdcba123.github.io/images/eclipse中maven插件搜索无结果解决办法/6.png">
+<meta property="og:updated_time" content="2017-11-15T09:24:22.939Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="eclipse中maven插件搜索无结果解决办法">
 <meta name="twitter:description" content="在maven中导入jar包可能会遇到各种问题 第一个问题：eclipse中并不会出现正常的select界面，会提示： 1[rectangle setX: 10 y: 10 width: 20 height: 20]; 1alert(&amp;apos;Hello World!&amp;apos;); Array.map1array.map(callback[, thisArg])  可能的原因是：maven自动下">
@@ -335,6 +337,7 @@
 <p>解决办法：<br>点击：”Window” -&gt; “Preferences” 然后在左侧栏选择”maven”，勾选 Download repository index updates on startup<br>如图所示：<br><img src="/images/eclipse中maven插件搜索无结果解决办法/2.png" alt=""></p>
 <h3 id="第二个问题："><a href="#第二个问题：" class="headerlink" title="第二个问题："></a>第二个问题：</h3><p>eclipse中并不会出现正常的select界面，啥都不提示，就是无法搜索远程库<br>可能的原因是：没有配置可用的仓库或者仓库的索引损坏导致无法检索</p>
 <p>解决办法：<br>首先打开eclipse中的Maven Repositories视图<br><img src="/images/eclipse中maven插件搜索无结果解决办法/3.png" alt=""><br><img src="/images/eclipse中maven插件搜索无结果解决办法/4.png" alt=""><br><img src="/images/eclipse中maven插件搜索无结果解决办法/5.png" alt=""><br>在上图中的cental(<a href="http://repo1...)上右击之后，选择rebuild" target="_blank" rel="external">http://repo1...)上右击之后，选择rebuild</a> index(full index enabled如果没有选中也需要选中)</p>
+<h3 id="第三个问题"><a href="#第三个问题" class="headerlink" title="第三个问题"></a>第三个问题</h3><p>如果经过上两步操作还无法进行搜索<br>可能要进行如下操作，reindex一下<br><img src="/images/eclipse中maven插件搜索无结果解决办法/6.png" alt=""></p>
 
       
     </div>
@@ -349,6 +352,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/java-maven/" rel="tag"># java maven</a>
+          
+        </div>
       
 
       
@@ -368,6 +377,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/11/15/method-initializationerror-not-foundJUnit4单元测试报错问题/" rel="prev" title="method initializationerror not foundJUnit4单元测试报错问题">
+                method initializationerror not foundJUnit4单元测试报错问题 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -444,7 +457,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -452,6 +465,15 @@
 
             
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
             
 
           </nav>
@@ -483,7 +505,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一个问题："><span class="nav-number">1.</span> <span class="nav-text">第一个问题：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二个问题："><span class="nav-number">2.</span> <span class="nav-text">第二个问题：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一个问题："><span class="nav-number">1.</span> <span class="nav-text">第一个问题：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二个问题："><span class="nav-number">2.</span> <span class="nav-text">第二个问题：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第三个问题"><span class="nav-number">3.</span> <span class="nav-text">第三个问题</span></a></li></ol></div>
             
 
           </div>
