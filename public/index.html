@@ -323,29 +323,16 @@
       
         
           
-            <h3 id="第一步：搭建java环境以及下载好IDE（eclipse或者myeclipse）"><a href="#第一步：搭建java环境以及下载好IDE（eclipse或者myeclipse）" class="headerlink" title="第一步：搭建java环境以及下载好IDE（eclipse或者myeclipse）"></a>第一步：搭建java环境以及下载好IDE（eclipse或者myeclipse）</h3><p>  如果不会请参照教程：</p>
-<h3 id="第二步：在eclipse中新建一个maven项目"><a href="#第二步：在eclipse中新建一个maven项目" class="headerlink" title="第二步：在eclipse中新建一个maven项目"></a>第二步：在eclipse中新建一个maven项目</h3><p>如图所示：<br><img src="/images/从零开始创建maven项目并整合SSM框架/1.png" alt=""><br><img src="/images/从零开始创建maven项目并整合SSM框架/2.png" alt=""><br><img src="/images/从零开始创建maven项目并整合SSM框架/3.jpg" alt=""><br><img src="/images/从零开始创建maven项目并整合SSM框架/4.jpg" alt=""><br>在上图中的：Group id和Artifact id需要全局唯一。这是初级教程，就不详细解释了，百度一下就知道了。一般package名为Group id 加上 Artifact id<br>这时候会看到一些错误，先不管它：<br>如图：<br><img src="/images/从零开始创建maven项目并整合SSM框架/5.png" alt=""></p>
-<h3 id="第三步：设置jre为1-8或者适合的版本以及把Dynamic-web-module改为3-1或对应版本"><a href="#第三步：设置jre为1-8或者适合的版本以及把Dynamic-web-module改为3-1或对应版本" class="headerlink" title="第三步：设置jre为1.8或者适合的版本以及把Dynamic web module改为3.1或对应版本"></a>第三步：设置jre为1.8或者适合的版本以及把Dynamic web module改为3.1或对应版本</h3><p>首先：eclipse调整jre版本有三个地方需要调整<br>如图所示：<br>第一个地方修改：<br>点开properties找到如下：<br><img src="/images/从零开始创建maven项目并整合SSM框架/6.jpg" alt=""><br>选中之后点edit:<br><img src="/images/从零开始创建maven项目并整合SSM框架/7.jpg" alt=""><br>选择完成之后应该变成：<br><img src="/images/从零开始创建maven项目并整合SSM框架/8.jpg" alt=""><br>到这里，第一个地方修改完毕。</p>
-<p>第二个地方修改：<br>点开properties找到如下：<br><img src="/images/从零开始创建maven项目并整合SSM框架/11.jpg" alt=""><br>修改完毕。</p>
-<p>第三个地方修改：<br><img src="/images/从零开始创建maven项目并整合SSM框架/9.jpg" alt=""><br>修改完jre版本之后，还需要在这里修改Dynamic web module版本。<br>这个时候碰到了问题，不让修改。这时候需要去.settings文件夹中修改文件。<br>首先找到项目中的.settings文件，比如我的地址是：D:\eclipse-workspace\ssmDemo.settings<br>项目中为：<br><img src="/images/从零开始创建maven项目并整合SSM框架/13.png" alt=""><br>用另外的编辑器打开三个文件，做如下修改：<br><img src="/images/从零开始创建maven项目并整合SSM框架/12.png" alt=""><br><img src="/images/从零开始创建maven项目并整合SSM框架/14.png" alt=""><br><img src="/images/从零开始创建maven项目并整合SSM框架/15.png" alt=""><br>修改完成后回到eclipse，发现Dynamic web module已经变成了3.1<br><img src="/images/从零开始创建maven项目并整合SSM框架/19.png" alt=""></p>
-<h3 id="第四步：使用maven导入必要的jar包"><a href="#第四步：使用maven导入必要的jar包" class="headerlink" title="第四步：使用maven导入必要的jar包"></a>第四步：使用maven导入必要的jar包</h3><p>进入如下界面，并打开pom.xml（ps：请注意maven文件夹格式：src/main/java,src/main/resources,src/test/java这三个source folder必须要有，没有的话，就去文件夹中建立相应的文件夹）<br><img src="/images/从零开始创建maven项目并整合SSM框架/20.png" alt=""><br>进行如下点击：<br><img src="/images/从零开始创建maven项目并整合SSM框架/21.jpg" alt=""></p>
-<p>进入到如下界面，发现一个问题，没有相应的索引，我们需要去给maven重新建立索引。<br><img src="/images/从零开始创建maven项目并整合SSM框架/22.png" alt=""><br>参照我的另一篇文章：<br><blockquote><p>eclipse中maven插件搜索无结果解决办法</p>
-<footer><strong>https://abcdcba123.github.io/2017/11/14/eclipse中maven插件搜索无结果解决办法</strong></footer></blockquote></p>
-<p>一步一步增加所需要的包<br><figure class="highlight xml"><figcaption><span>[我的pom.xml] []</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">my pom.xml codeblock</span><br></pre></td></tr></table></figure></p>
-<h3 id="第五步：建立起必要的包和文件夹"><a href="#第五步：建立起必要的包和文件夹" class="headerlink" title="第五步：建立起必要的包和文件夹"></a>第五步：建立起必要的包和文件夹</h3><p>在src/main/java中建立如下所示的包：<br><img src="/images/从零开始创建maven项目并整合SSM框架/24.png" alt=""><br>在src/main/resources中建立两个文件夹：<br><img src="/images/从零开始创建maven项目并整合SSM框架/23.png" alt=""><br>| 文件名        | 作用  |<br>| ——–   | :—-: |<br>| src       |   根目录 |<br>| main        |  主要目录，可以放java代码和一些资源文件。    |<br>| java        |  存放我们的java代码，这个文件夹要使用Build Path -&gt; Use as Source Folder，这样看包结构会方便很多，新建的包就相当于在这里新建文件夹咯。    |<br>| resources        |  存放资源文件，譬如各种的spring，mybatis，log配置文件。    |<br>| mapper        |  存放dao中每个方法对应的sql，在这里配置，无需写daoImpl。    |<br>| spring        |  这里当然是存放spring相关的配置文件，有dao service web三层。   |<br>| sql        |  其实这个可以没有，但是为了项目完整性还是加上吧。   |<br>| webapp        |  用来存放我们前端的静态资源，如jsp js css。   |<br>| WEB-INF        |  很重要的一个目录，外部浏览器无法访问，只有羡慕内部才能访问，可以把jsp放在这里，另外就是web.xml了。你可能有疑问了，为什么上面java中的resources里面的配置文件不妨在这里，那么是不是会被外部窃取到？你想太多了，部署时候基本上只有webapp里的会直接输出到根目录，其他都会放入WEB-INF里面，项目内部依然可以使用classpath:XXX来访问，好像IDE里可以设置部署输出目录，这里扯远了~    |<br>| test        |  这里是测试分支。    |<br>| java        |  测试java代码，应遵循包名相同的原则，这个文件夹同样要使用Build Path -&gt; Use as Source Folder，这样看包结构会方便很多。   |<br>| resources        |  这里的资源是指项目的静态资源，如js css images等。    |<br>| resources        |  这里的资源是指项目的静态资源，如js css images等。    |</p>
-<h3 id="第六步：开始编码"><a href="#第六步：开始编码" class="headerlink" title="第六步：开始编码"></a>第六步：开始编码</h3><h4 id="配置数据库连接-jdbc-properties"><a href="#配置数据库连接-jdbc-properties" class="headerlink" title="配置数据库连接(jdbc.properties)"></a>配置数据库连接(jdbc.properties)</h4><figure class="highlight plain"><figcaption><span>[jdbc.properties]</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">jdbc.driver=com.mysql.jdbc.Driver</span><br><span class="line">jdbc.url=jdbc:mysql://localhost:3306/ssm?useUnicode=true&amp;characterEncoding=utf8</span><br><span class="line">jdbc.username=root</span><br><span class="line">jdbc.password=root</span><br></pre></td></tr></table></figure>
-<h4 id="配置spring的dao层"><a href="#配置spring的dao层" class="headerlink" title="配置spring的dao层"></a>配置spring的dao层</h4><figure class="highlight xml"><figcaption><span>[spring-dao.xml] []</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">my spring-dao.xml</span><br></pre></td></tr></table></figure>
-<h4 id="配置mybatis"><a href="#配置mybatis" class="headerlink" title="配置mybatis"></a>配置mybatis</h4><figure class="highlight xml"><figcaption><span>[mybatis-config.xml] []</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">my mybatis-config.xml</span><br></pre></td></tr></table></figure>
-<h4 id="配置spring"><a href="#配置spring" class="headerlink" title="配置spring"></a>配置spring</h4><figure class="highlight xml"><figcaption><span>[spring-dao.xml] []</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">my spring-dao.xml</span><br></pre></td></tr></table></figure>
-<figure class="highlight xml"><figcaption><span>[spring-service.xml] []</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">my spring-service.xml</span><br></pre></td></tr></table></figure>
-<figure class="highlight xml"><figcaption><span>[spring-controller.xml] []</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">my spring-controller.xml</span><br></pre></td></tr></table></figure>
-<p>最后总结一下，带上pom.xml一共配置了8个文件，如图：<br><img src="/images/从零开始创建maven项目并整合SSM框架/30.png" alt=""></p>
-<h4 id="配置过程需要注意的地方（配置完成可以跳过）"><a href="#配置过程需要注意的地方（配置完成可以跳过）" class="headerlink" title="配置过程需要注意的地方（配置完成可以跳过）"></a>配置过程需要注意的地方（配置完成可以跳过）</h4><p><img src="/images/从零开始创建maven项目并整合SSM框架/31.png" alt=""><br><img src="/images/从零开始创建maven项目并整合SSM框架/32.png" alt=""><br><img src="/images/从零开始创建maven项目并整合SSM框架/33.png" alt=""><br><img src="/images/从零开始创建maven项目并整合SSM框架/34.png" alt=""><br><img src="/images/从零开始创建maven项目并整合SSM框架/35.png" alt=""><br><img src="/images/从零开始创建maven项目并整合SSM框架/36.png" alt=""></p>
-<p>到这里配置工作已经完成了，用引用的文章中的小项目检验</p>
-<h3 id="第七步：SSM框架应用实例（简单图书管理系统）"><a href="#第七步：SSM框架应用实例（简单图书管理系统）" class="headerlink" title="第七步：SSM框架应用实例（简单图书管理系统）"></a>第七步：SSM框架应用实例（简单图书管理系统）</h3><h4 id="建表，插入数据"><a href="#建表，插入数据" class="headerlink" title="建表，插入数据"></a>建表，插入数据</h4><p>首先新建数据库名为ssm，再创建两张表：图书表book和预约图书表appointment，并且为book表初始化一些数据，sql如下。<br><figure class="highlight sql"><figcaption><span>[schema.sql] []</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 创建图书表</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="string">`book`</span> (</span><br><span class="line">  <span class="string">`book_id`</span> <span class="built_in">bigint</span>(<span class="number">20</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> AUTO_INCREMENT <span class="keyword">COMMENT</span> <span class="string">'图书ID'</span>,</span><br><span class="line">  <span class="string">`name`</span> <span class="built_in">varchar</span>(<span class="number">100</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">COMMENT</span> <span class="string">'图书名称'</span>,</span><br><span class="line">  <span class="string">`number`</span> <span class="built_in">int</span>(<span class="number">11</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">COMMENT</span> <span class="string">'馆藏数量'</span>,</span><br><span class="line">  PRIMARY <span class="keyword">KEY</span> (<span class="string">`book_id`</span>)</span><br><span class="line">) <span class="keyword">ENGINE</span>=<span class="keyword">InnoDB</span> AUTO_INCREMENT=<span class="number">1000</span> <span class="keyword">DEFAULT</span> <span class="keyword">CHARSET</span>=utf8 <span class="keyword">COMMENT</span>=<span class="string">'图书表'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- 初始化图书数据</span></span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> <span class="string">`book`</span> (<span class="string">`book_id`</span>, <span class="string">`name`</span>, <span class="string">`number`</span>)</span><br><span class="line"><span class="keyword">VALUES</span></span><br><span class="line">	(<span class="number">1000</span>, <span class="string">'Java程序设计'</span>, <span class="number">10</span>),</span><br><span class="line">	(<span class="number">1001</span>, <span class="string">'数据结构'</span>, <span class="number">10</span>),</span><br><span class="line">	(<span class="number">1002</span>, <span class="string">'设计模式'</span>, <span class="number">10</span>),</span><br><span class="line">	(<span class="number">1003</span>, <span class="string">'编译原理'</span>, <span class="number">10</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 创建预约图书表</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="string">`appointment`</span> (</span><br><span class="line">  <span class="string">`book_id`</span> <span class="built_in">bigint</span>(<span class="number">20</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">COMMENT</span> <span class="string">'图书ID'</span>,</span><br><span class="line">  <span class="string">`student_id`</span> <span class="built_in">bigint</span>(<span class="number">20</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">COMMENT</span> <span class="string">'学号'</span>,</span><br><span class="line">  <span class="string">`appoint_time`</span> <span class="keyword">timestamp</span> <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="keyword">CURRENT_TIMESTAMP</span> <span class="keyword">ON</span> <span class="keyword">UPDATE</span> <span class="keyword">CURRENT_TIMESTAMP</span> <span class="keyword">COMMENT</span> <span class="string">'预约时间'</span> ,</span><br><span class="line">  PRIMARY <span class="keyword">KEY</span> (<span class="string">`book_id`</span>, <span class="string">`student_id`</span>),</span><br><span class="line">  <span class="keyword">INDEX</span> <span class="string">`idx_appoint_time`</span> (<span class="string">`appoint_time`</span>)</span><br><span class="line">) <span class="keyword">ENGINE</span>=<span class="keyword">InnoDB</span> <span class="keyword">DEFAULT</span> <span class="keyword">CHARSET</span>=utf8 <span class="keyword">COMMENT</span>=<span class="string">'预约图书表'</span></span><br></pre></td></tr></table></figure></p>
-<p>以上内容大部分来自git上liyifeng1994的ssm项目，转载自：<br><a href="https://github.com/liyifeng1994/ssm" target="_blank" rel="external">https://github.com/liyifeng1994/ssm</a><br>致敬！</p>
-
-          
+          第一步：搭建java环境以及下载好IDE（eclipse或者myeclipse）  如果不会请参照教程：
+第二步：在eclipse中新建一个maven项目如图所示：在上图中的：Group id和Artifact id需要全局唯一。这是初级教程，就不详细解释了，百度一下就知道了。一般package名为
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/11/17/从零开始创建maven项目并整合SSM框架/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -463,9 +450,16 @@
       
         
           
-            <h3 id="method-initializationerror-not-foundJUnit4单元测试报错问题"><a href="#method-initializationerror-not-foundJUnit4单元测试报错问题" class="headerlink" title="method initializationerror not foundJUnit4单元测试报错问题"></a>method initializationerror not foundJUnit4单元测试报错问题</h3><p>使用JUnit 4进行单元测试时，发现测试程序运行不起来，报method initializationerror not found错误，如下：<br><img src="/images/method-initializationerror-not-foundJUnit4单元测试报错问题/1.png" alt=""></p>
+          method initializationerror not foundJUnit4单元测试报错问题使用JUnit 4进行单元测试时，发现测试程序运行不起来，报method initializationerror not found错误，如下：
 
           
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/11/15/method-initializationerror-not-foundJUnit4单元测试报错问题/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -583,19 +577,19 @@
       
         
           
-            <p>在maven中导入jar包可能会遇到各种问题</p>
-<h3 id="第一个问题："><a href="#第一个问题：" class="headerlink" title="第一个问题："></a>第一个问题：</h3><p>eclipse中并不会出现正常的select界面，会提示：</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[rectangle setX: <span class="number">10</span> y: <span class="number">10</span> width: <span class="number">20</span> height: <span class="number">20</span>];</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alert(&apos;Hello World!&apos;);</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><figcaption><span>Array.map</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array.map(callback[, thisArg])</span><br></pre></td></tr></table></figure>
-<p><img src="/images/eclipse中maven插件搜索无结果解决办法/1.png" alt=""></p>
-<p>可能的原因是：maven自动下载index组件的功能没有开启</p>
-<p>解决办法：<br>点击：”Window” -&gt; “Preferences” 然后在左侧栏选择”maven”，勾选 Download repository index updates on startup<br>如图所示：<br><img src="/images/eclipse中maven插件搜索无结果解决办法/2.png" alt=""></p>
-<h3 id="第二个问题："><a href="#第二个问题：" class="headerlink" title="第二个问题："></a>第二个问题：</h3><p>eclipse中并不会出现正常的select界面，啥都不提示，就是无法搜索远程库<br>可能的原因是：没有配置可用的仓库或者仓库的索引损坏导致无法检索</p>
-<p>解决办法：<br>首先打开eclipse中的Maven Repositories视图<br><img src="/images/eclipse中maven插件搜索无结果解决办法/3.png" alt=""><br><img src="/images/eclipse中maven插件搜索无结果解决办法/4.png" alt=""><br><img src="/images/eclipse中maven插件搜索无结果解决办法/5.png" alt=""><br>在上图中的cental(<a href="http://repo1...)上右击之后，选择rebuild" target="_blank" rel="external">http://repo1...)上右击之后，选择rebuild</a> index(full index enabled如果没有选中也需要选中)</p>
-<h3 id="第三个问题"><a href="#第三个问题" class="headerlink" title="第三个问题"></a>第三个问题</h3><p>如果经过上两步操作还无法进行搜索<br>可能要进行如下操作，reindex一下<br><img src="/images/eclipse中maven插件搜索无结果解决办法/6.png" alt=""></p>
-
-          
+          在maven中导入jar包可能会遇到各种问题
+第一个问题：eclipse中并不会出现正常的select界面，会提示：
+1[rectangle setX: 10 y: 10 width: 20 height: 20];
+1alert(&apos;Hello World!&apos;);
+Array.m
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/11/14/eclipse中maven插件搜索无结果解决办法/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -713,17 +707,15 @@
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
+          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in 
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/11/10/hello-world/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -841,10 +833,17 @@
       
         
           
-            <p>#this is test</p>
-<p>##just test</p>
+          #this is test
+##just test
 
           
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/11/09/article-title/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
